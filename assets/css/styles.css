@@ -1,0 +1,310 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&display=swap");
+
+/* Sony Alpha Official Branding Colors */
+:root {
+  --sony-orange: #ea5506;
+  --sony-black: #030010;
+  --sony-white: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #6c757d;
+  --bg-light: #f8f9fa;
+  --sony-orange-hover: #d14d05;
+}
+
+/* Typography - Sony Style */
+body {
+  font-family: "Anek Devanagari", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+/* Navbar Styling */
+.navbar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--sony-white) !important;
+  padding: 0.75rem 0;
+}
+
+.navbar-brand img {
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+  transform: scale(1.05);
+}
+
+.nav-link {
+  color: var(--text-primary) !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  transition: color 0.3s ease, transform 0.2s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--sony-orange) !important;
+  transform: translateY(-2px);
+}
+
+.nav-link.active {
+  color: var(--sony-orange) !important;
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  right: 1rem;
+  height: 3px;
+  background-color: var(--sony-orange);
+  border-radius: 2px;
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 5rem 0 4rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--sony-black);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  font-size: 1.75rem;
+  color: var(--sony-orange);
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Visual Section */
+.visual-section {
+  background-color: var(--bg-light);
+}
+
+.featured-image-container {
+  margin: 0;
+}
+
+.featured-image-container img {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  height: auto;
+}
+
+.featured-image-container:hover img {
+  transform: scale(1.02);
+}
+
+figcaption {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+/* Info Card */
+.info-section {
+  background-color: #ffffff;
+}
+
+.info-card {
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.info-card .card-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--sony-black);
+}
+
+.info-card .card-text {
+  font-size: 1.0625rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.info-card strong {
+  color: var(--sony-orange);
+  font-weight: 600;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--sony-black) !important;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--sony-orange);
+  border-color: var(--sony-orange);
+  color: var(--sony-white);
+  font-weight: 600;
+  padding: 0.625rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--sony-orange-hover);
+  border-color: var(--sony-orange-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(234, 85, 6, 0.3);
+}
+
+.btn-outline-primary {
+  color: var(--sony-orange);
+  border-color: var(--sony-orange);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--sony-orange);
+  border-color: var(--sony-orange);
+  color: var(--sony-white);
+  transform: translateY(-2px);
+}
+
+/* Badges */
+.badge.bg-primary {
+  background-color: var(--sony-orange) !important;
+}
+
+.badge.bg-dark {
+  background-color: var(--sony-black) !important;
+}
+
+.badge.bg-danger {
+  background-color: var(--sony-orange) !important;
+}
+
+/* Cards */
+.camera-card,
+.lens-card,
+.support-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 1rem;
+}
+
+.camera-card:hover,
+.lens-card:hover,
+.support-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 1rem 3rem rgba(234, 85, 6, 0.15) !important;
+}
+
+.camera-card .card-title,
+.lens-card .card-title {
+  color: var(--sony-black);
+  font-weight: 700;
+}
+
+.support-card i {
+  transition: transform 0.3s ease;
+}
+
+.support-card:hover i {
+  transform: scale(1.1);
+}
+
+/* Text colors */
+.text-primary {
+  color: var(--sony-orange) !important;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.fade-in-delay-1 {
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.fade-in-delay-2 {
+  animation: fadeInUp 0.8s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Lazy loading animation */
+.lazy-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.lazy-animate.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+  }
+
+  .info-card .card-title {
+    font-size: 1.75rem;
+  }
+
+  .alpha-symbol {
+    font-size: 1.75rem;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Bootstrap overrides for Sony style */
+.rounded-4 {
+  border-radius: 1rem !important;
+}
+
+.shadow-lg {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
